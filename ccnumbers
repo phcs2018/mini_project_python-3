@@ -5,6 +5,6 @@ import ccnumbers.txt as ccnumber
 
 #Establish that we are searching for a string of 16 digits or 4 groups of 4 numbers with -
 
-for ccnumber in ccnumber.txt:
-	if ccnumber.length == 16 OR ccnumber = string.match(\d{4})(-?)
+for ccnumbers in ccnumber:
+	if ccnumber.length == 16 OR ccnumber = string.match(\d{4})
 	print("These are credit card numbers!" ccnumber)
