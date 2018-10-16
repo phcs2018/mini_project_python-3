@@ -19,3 +19,14 @@ if __name__ == '__main__':
         4) Go through the file and print the total number of valid credit card numbers that you've found
     '''
     #### YOUR CODE HERE #####
+ pattern = re.compile(r'^\d{4}-\d{4}-\d{4}-\d{4}$')
+    pattern2 = re.compile(r'^\d{16}$')
+    
+    with open("ccnumbers.txt") as file:
+        valid=0
+        for ccnumber in file:
+            ccnumber = ccnumber.strip()
+            if pattern.match(ccnumber) or pattern2.match(ccnumber):
+                print ccnumber
+                valid += 1
+        print(valid)
